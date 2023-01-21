@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    align-items: center; /* centralizando itens que estão nessa tag */
+    justify-content: space-between;/* distribue os itens igualmente dentro do espaço da tag */
+    padding: 48px;
+    position: fixed; /* fixando posição dos elementos */
+    background-color: black;
+    width: 100%;/* tag preenche toda a tela dentro do seu espaço */
+}
+
+body{
+    background-color: black;
+    height: 100vh;
+}
+
+button{
+    padding: 16px 24px;
+    border-radius: 8px; 
+    border: 1px solid #8b5cf6;
+    background-color: transparent;
+    color: white;
+    display: flex;
+    gap: 12px; /* define espaçamento entre linhas e colunas */
+    align-items: center; /* alinha os elementos ao centro da tela */
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 125%; /* espaçamento entre linhas do texto */
+    cursor: pointer;
+
+}
+
+#form-habits{
+    display: flex;
+    color: white;
+    padding: 180px 48px 48px; /*encaixe do conteudo na largura*/
+    width: fit-content; /*defina uma largura máxima permitida para o tamanho de um elemento*/
+}
+
+.habits{
+    display: flex;
+    flex-direction:column;/*ordena os elementos em uma coluna*/
+    gap: 24px;
+    margin-top: 50px;
+}
+
+.habit{
+    width: 64px;
+    height: 64px;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.days{
+    display: flex;
+    gap: 48px;
+    margin-left: 32px;
+}
+
+.day{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.day div{
+    margin-bottom: 8px;
+    text-align: center;/*alinha os textos da classe ao centro*/
+}
+
+input{
+    appearance: none;
+    -webkit-appearance: none;/*altera o estilo padrão do elemento html*/
+    width: 64px;
+    height: 64px;
+    border: 2px solid #27272a;
+    border-radius: 8px;
+    background: #18181b;
+    cursor: pointer;
+}
+
+/*pseudo-selector, quando o botão for selecionado, terá essas configurações*/
+input:checked{
+    background: #8b5cf6;
+    border: 2px solid #8b5cf6;
+}
+
+@media (max-width: 570px) {
+    button div {
+        display: none;/*quando a largura da tela for menor que 570px, o texto do botão sumirá, com responsividade */
+    }
+}
